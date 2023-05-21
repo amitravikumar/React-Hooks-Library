@@ -1,33 +1,19 @@
 import React, { useState } from "react";
 
 const StateTutorial = () => {
-  const [inputValue, setInputValue] = useState("useState");
+  const [inputValue, setInputValue] = useState("Pedro");
 
   let onChange = (event) => {
-    let newDataUpdate = event.target.value;
-    setInputValue(newDataUpdate);
+    const newValue = event.target.value;
+    setInputValue(newValue);
   };
 
   return (
     <div>
-      <input placeholder="Enter Something to check" onChange={onChange} />
-      <p>{inputValue}</p>
+      <input placeholder="enter something..." onChange={onChange} />
+      {inputValue}
     </div>
   );
 };
-
-// const StateTutorial = () => {
-//   let [counter, setCounter] = useState(1);
-
-//   let increment = () => {
-//     setCounter(counter + 1);
-//   };
-//   return (
-//     <div>
-//       <p>This is the current count: {counter}</p>
-//       <button onClick={increment}>Increment Counter</button>
-//     </div>
-//   );
-// };
 
 export default StateTutorial;
